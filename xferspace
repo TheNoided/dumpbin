@@ -1,5 +1,10 @@
-yum install -y mongodb-org
-chkconfig --add mongod ; systemctl daemon-reload ; systemctl enable mongod.service ; systemctl start mongod.service
-rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
-echo -e "[elasticsearch-5.x]\nname=Elasticsearch repository for 5.x packages\nbaseurl=https://artifacts.elastic.co/packages/5.x/yum\ngpgcheck=1\ngpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch\nenabled=1\nautorefresh=1\ntype=rpm-md" > /etc/yum.repos.d/elasticsearch.repo
-yum install elasticsearch
+[group_spacewalkproject-java-packages]
+name=Copr repo for java-packages owned by @spacewalkproject
+baseurl=https://copr-be.cloud.fedoraproject.org/results/@spacewalkproject/java-packages/epel-7-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://copr-be.cloud.fedoraproject.org/results/@spacewalkproject/java-packages/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
