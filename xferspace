@@ -1,10 +1,2 @@
-[group_spacewalkproject-spacewalk-2.8]
-name=Copr repo for spacewalk-2.8 owned by @spacewalkproject
-baseurl=https://copr-be.cloud.fedoraproject.org/results/@spacewalkproject/spacewalk-2.8/epel-7-$basearch/
-type=rpm-md
-skip_if_unavailable=True
-gpgcheck=1
-gpgkey=https://copr-be.cloud.fedoraproject.org/results/@spacewalkproject/spacewalk-2.8/pubkey.gpg
-repo_gpgcheck=0
-enabled=1
-enabled_metadata=1
+rpm -Uvh https://copr-be.cloud.fedoraproject.org/results/@spacewalkproject/spacewalk-2.8-client/epel-7-x86_64/00742644-spacewalk-repo/spacewalk-client-repo-2.8-11.el7.centos.noarch.rpm
+rpm -Uvh http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
