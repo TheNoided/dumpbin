@@ -1,2 +1,9 @@
-rpm -Uvh https://copr-be.cloud.fedoraproject.org/results/@spacewalkproject/spacewalk-2.8-client/epel-7-x86_64/00742644-spacewalk-repo/spacewalk-client-repo-2.8-11.el7.centos.noarch.rpm
-rpm -Uvh http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+Query <QueryList>\
+<Query Id=”0">\
+<Select Path=”Security”>*</Select>\
+<Select Path=”System”>*[System/Level=4]</Select>\
+<Select Path=”Application”>*[Application/Level=2]</Select>\
+<Select Path=”Setup”>*[System/Level=3]</Select>\
+<Select Path=”Windows PowerShell”>*</Select>\
+<Select Path=”Microsoft-Windows-Sysmon/Operational”>*</Select>\</Query>\
+</QueryList>
