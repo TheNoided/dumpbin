@@ -1,27 +1,14 @@
-dn: dc=linuxtechlab,dc=local
-
-dc: linuxtechlab
-
-objectClass: top
-
-objectClass: domain
-
-dn: cn=ldapadm ,dc=linuxtechlab,dc=local
-
-objectClass: organizationalRole
-
-cn: Manager
-
-description: LDAP Manager
-
-dn: ou=Employees,dc=linuxtechlab,dc=local
-
-objectClass: organizationalUnit
-
-ou: Employees
-
-dn: ou=Visitors,dc=linuxtechlab,dc=local
-
-objectClass: organizationalUnit
-
-ou: Visitors
+dn: olcDatabase={2}hdb,cn=config
+changetype: modify
+replace: olcSuffix
+olcSuffix: dc=rtndomain,dc=local
+ 
+dn: olcDatabase={2}hdb,cn=config
+changetype: modify
+replace: olcRootDN
+olcRootDN: cn=ldapadm,dc=rtndomain,dc=local
+ 
+dn: olcDatabase={2}hdb,cn=config
+changetype: modify
+replace: olcRootPW
+olcRootPW: 
