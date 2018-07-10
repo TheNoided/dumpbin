@@ -1,9 +1,3 @@
-Query <QueryList>\
-<Query Id=”0">\
-<Select Path=”Security”>*</Select>\
-<Select Path=”System”>*[System/Level=4]</Select>\
-<Select Path=”Application”>*[Application/Level=2]</Select>\
-<Select Path=”Setup”>*[System/Level=3]</Select>\
-<Select Path=”Windows PowerShell”>*</Select>\
-<Select Path=”Microsoft-Windows-Sysmon/Operational”>*</Select>\</Query>\
-</QueryList>
+cd /etc/yum.repos.d && curl –Ok https://copr.fedorainfracloud.org/coprs/g/spacewalkproject/spacewalk-2.8/repo/epel-7/group_spacewalkproject-spacewalk-2.8-epel-7.repo
+curl –Ok https://copr.fedorainfracloud.org/coprs/g/spacewalkproject/java-packages/repo/epel-7/group_spacewalkproject-java-packages-epel-7.repo
+firewall-cmd --add-service=http ; firewall-cmd --add-service=https ; firewall-cmd --add-port=5222/tcp ; firewall-cmd --runtime-to-perm
